@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <style>
+        .generate {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        .generate > div {
+            padding: 10px;
+            width: 50%;
+        }
+        @media (min-width: 768px) {
+            .generate > div {
+                width: 20%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .generate > div {
+                width: 10%;
+            }
+        }
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FizzBuzz Generator</h1>
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="counterStart">Starting value</label>
+                    <input type="number" class="form-control" id="counterStart" value="1">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="counter">Ending value</label>
+                    <input type="number" class="form-control" id="counter" value="100">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="counterOne">Fizz value</label>
+                    <input type="number" class="form-control" id="counterOne" value="3">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="counterTwo">Buzz value</label>
+                    <input type="number" class="form-control" id="counterTwo" value="5">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="colorStandart">Standart color</label>
+                    <input type="color" class="form-control" id="colorStandart" value="#ff0000">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="colorOne">Fizz color</label>
+                    <input type="color" class="form-control" id="colorOne" value="#00ff00">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="colorTwo">Buzz color</label>
+                    <input type="color" class="form-control" id="colorTwo" value="#0000ff">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <label for="colorSwitch">FizzBuzz color</label>
+                    <input type="color" class="form-control" id="colorSwitch" value="#00ffff">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-5 col-lg-4">
+                <button onclick="generateDivs()" class="form-group btn btn-info btn-block">
+                    Generate by default
+                </button>
+            </div>
+            <div class="col-12 col-md-5 col-lg-4">
+                <button onclick="generateDivs(false)" class="form-group btn btn-info btn-block">
+                    Generate custom
+                </button>
+            </div>
+        </div>
+        <div id="inner" class="generate"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
